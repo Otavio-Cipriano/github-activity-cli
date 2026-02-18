@@ -17,13 +17,6 @@ use App\Core\Console;
 
 $githubService = new GithubService();
 
-//$userEvents = $githubService->getUserEvents('otavio-cipriano');
-
-//echo $response;
-
-//$event = GitHubEvents::from('PushEvent');
-//echo $event->format(3, 'main');
-
 $console = new Console($githubService);
 $console->run($argv);
 

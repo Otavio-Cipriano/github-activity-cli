@@ -45,8 +45,11 @@ enum GitHubEvents: string
     public function format(mixed ...$args): string
     {
         $template = match($this) {
-            self::Delete => 'Deleted %s from %s',
+            self::Delete => 'Deleted %s times %s',
             self::Push   => 'Pushed %d commits to %s',
+            self::PullRequest => 'Pull requested  %d from %s',
+            self::Watch => 'Watched %d repository %s',
+            self::Create => 'Created %d repository %s',
             default      => $this->label(),
         };
 
