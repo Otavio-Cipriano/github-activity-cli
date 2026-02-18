@@ -8,8 +8,11 @@ class GithubService
 
     private CurlService $curlService;
 
-    public function __construct()
+    private CacheService $cacheService;
+
+    public function __construct(CacheService $cacheService)
     {
+        $this->cacheService = $cacheService;
         $this->curlService = new CurlService($this->baseURl);
         $this->curlService->setHeaders([
             "Content-Type: application/json",
@@ -21,7 +24,13 @@ class GithubService
 
     public function getUserEvents(string $username): array|false
     {
-        return json_decode($this->curlService->get("$username/events"), true);
+        $cacheKey = 'userEvents';
+        $cachedUserEvents = $this->cacheService->get($cacheKey);
+        if($cachedUserEvents) return $cachedUserEvents;
+
+        $userEvents = json_decode($this->curlService->get("$username/events"), true);
+        $this->cacheService->set($cacheKey,$userEvents);
+        return $userEvents;
     }
 
 }

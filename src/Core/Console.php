@@ -9,6 +9,7 @@ class Console
 {
     private GithubService $githubService;
 
+
     public function __construct(GithubService $githubService)
     {
         $this->githubService = $githubService;
