@@ -24,6 +24,7 @@ This project was developed with goal to finish the challenge from [Roadmap.sh](h
 ## Features
 - ✅ User can enter username
 - ✅ User can see last activity done by github account entered
+- ✅ Responses cached for 10 minutes to avoid redundant API calls
 
 ## Technical Decisions
 
@@ -69,14 +70,15 @@ Other possible improvements:
 
 ## Technologies
 - PHP 8+
-- cURL 
+- cURL
+- Composer
 
 ## How to Run
 On Windows, PHP must be installed with cURL enabled. Additionally, you need to configure the SSL CA Certificates to avoid certificate verification errors.
 
 ```bash
 git clone https://github.com/Otavio-Cipriano/github-activity-cli.git
-cd project /github-activity-cli
+cd github-activity-cli
 composer github-activity
 ```
 
