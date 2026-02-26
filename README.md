@@ -61,7 +61,7 @@ During development, the biggest difficulty was working with Enums, as I wasn't u
 
 In the future, it would be possible to improve how events are printed in the terminal and start using the full payload received from GitHub's API. However, since it was out of the project's scope, I decided not to, so I could move on to other projects sooner.
 
-Besides that, I tried to use [pds/skeleton](https://github.com/php-pds/skeleton) as a base to structure the project, as you can see in `Core\Console`. I would have implemented my own take on it, but given the simple scope of the project I didn't — and the code was not copied as-is either.
+Besides that, I tried to use [pds/skeleton](https://github.com/php-pds/skeleton) as a base to structure the project, as you can see in `Core\Console`. I would have implemented my own take on it, but given the simple scope of the project I didn't and the code was not copied as-is either.
 
 Other possible improvements:
 
