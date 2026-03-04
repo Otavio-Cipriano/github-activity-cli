@@ -57,7 +57,7 @@ github-user-activity/
 ```
 
 ## Limitations and Future Improvements
-During development, the biggest difficulty was working with Enums, as I wasn't used to how they work in PHP — it is quite different from Java and TypeScript.
+During development, the biggest difficulty was working with Enums, as I wasn't used to how they work in PHP, it is quite different from Java and TypeScript.
 
 In the future, it would be possible to improve how events are printed in the terminal and start using the full payload received from GitHub's API. However, since it was out of the project's scope, I decided not to, so I could move on to other projects sooner.
 
